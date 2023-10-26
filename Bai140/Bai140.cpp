@@ -1,11 +1,13 @@
 #include <iostream>
 #include <iomanip>
 #include <cstdlib>
+#include <ctime>
+
 #define maxx 25
 using namespace std;
 int main()
 {
-    srand(time(0));
+    srand(time(NULL));
     int b[maxx * maxx], a[maxx][maxx], i, j, n = 10;
     for (i = 0; i < n * n; ++i)
         b[i] = rand() % 100;
@@ -45,11 +47,10 @@ int main()
             --i; ++j;
         }
     }
-    cout << "Ma tran zig zag cheo :";
+    cout << "\nMa tran zig zag cheo :";
         for (i = 0; i < n; ++i) {
             for (j = 0; j < n; ++j) cout << setw(4) << a[i][j];
             cout << endl;
         }
-    getchar(); 
     return 0;
 }
